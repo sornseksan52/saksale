@@ -10,7 +10,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300&display=swap');
         #app{
             font-family: 'Sarabun', sans-serif;
-            /* font-size : 16px !important; */
+            font-size : 16px !important;
         }
         .v-data-table-header th {
             white-space: nowrap;
