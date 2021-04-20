@@ -31,7 +31,7 @@
                         :items-per-page="-1"
                         mobile-breakpoint="0"
                         fixed-header
-                        height="500"
+                        height="700"
                     >
                         <template v-slot:item.saleprice="{ item }">
                             @{{ formatNum(item.saleprice) }}
@@ -75,7 +75,7 @@
                                             v-bind="attrs"
                                             v-on="on"
                                             >
-                                            New Item
+                                            สินค้าใหม่
                                             </v-btn>
                                         </template>
                                         <v-card>
@@ -201,18 +201,20 @@
                                             <v-card-actions>
                                                 <v-spacer></v-spacer>
                                                 <v-btn
-                                                    color="blue darken-1"
-                                                    text
-                                                    @click="close"
-                                                >
-                                                    Cancel
-                                                </v-btn>
-                                                <v-btn
-                                                    color="blue darken-1"
-                                                    text
+                                                    color="success"
+                                                    rounded
+                                                    dark
                                                     @click="save"
                                                 >
                                                     Save
+                                                </v-btn>
+                                                <v-btn
+                                                    color="error"
+                                                    rounded
+                                                    dark
+                                                    @click="close"
+                                                >
+                                                    Cancel
                                                 </v-btn>
                                             </v-card-actions>
                                         </v-card>
@@ -297,7 +299,7 @@
                 {
                 text: 'ชื่อสินค้า',
                     align: 'start',
-                    sortable: false,
+                    // sortable: false,
                     value: 'productname',
                 },
                 { text: 'ราคาซื้อ', value: 'buyprice' ,align : 'end'},
@@ -323,7 +325,7 @@
 
         computed: {
             formTitle () {
-                return this.editedIndex === -1 ? 'New Item' : 'Edit Item'
+                return this.editedIndex === -1 ? 'สินค้าใหม่' : 'แก้ไขสินค้า'
             },
 
             computedDateFormatted () {
