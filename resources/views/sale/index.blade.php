@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
         #app{
-            font-family: 'Sarabun', sans-serif;
+            font-family: 'Itim', cursive;
             font-size : 16px !important;
         }
         .v-data-table-header th {
@@ -33,6 +33,7 @@
                         fixed-header
                         height="700"
                     >
+
                         <template v-slot:item.saleprice="{ item }">
                             @{{ formatNum(item.saleprice) }}
                         </template>
@@ -296,6 +297,7 @@
         vuetify: new Vuetify(),
         data: vm => ({
             headers: [
+                { text: 'ลำดับ',align : 'center'},
                 {
                 text: 'ชื่อสินค้า',
                     align: 'start',

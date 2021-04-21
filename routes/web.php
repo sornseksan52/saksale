@@ -19,3 +19,5 @@ Route::get('/', function () {
 
 Route::any('sale/{type?}', 'Sale@index');
 
+Route::get('conMongo','MongoController@create');
+
